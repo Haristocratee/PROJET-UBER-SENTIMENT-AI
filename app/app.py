@@ -17,7 +17,7 @@ def load_rag_system():
     load_dotenv()
     # On pointe vers le dossier où tu as sauvegardé la base de données (Ajuste le chemin si besoin)
     embeddings = OpenAIEmbeddings()
-    vectorstore = Chroma(persist_directory="db_uber", embedding_function=embeddings)
+    vectorstore = Chroma(persist_directory="../db_uber", embedding_function=embeddings)
     
     llm = ChatOpenAI(model_name="gpt-5.2", temperature=0)
     
